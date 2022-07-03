@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <div id="div" style="height: 100px; width: 100px; background-color: red">
+      <h1 id="hello">hey, how are <em id ="em">you</em></h1>
+      <button id = "div-button"></button>
+    </div>
+
+    <button type="button" id="btn1" value="click">one</button>
+    <button type="button" id="btn2" value="click">two</button>
+
+    <button type="button" id="btn3" value="click">three</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <button id="html">html</button>
+
+    <label for=""> </label>
+    <input type="text" id="input" />
+    <button id="form-button">submit data</button>
+
+    <button type="button" id="append">append</button>
+
+    <button id="remove">Remove</button>
+
+    <button id="addclass">add class</button>
+
+    <button id="remove-class">remove class</button>
+
+    <button id="toggle-class">toggle class</button>
+
+<button id="parent">parent</button>
+
+
+
+    <script>
+      // mouse events
+
+      // Click Function
+
+      // $("#btn").click(function(){
+      //   $('#hello').slideUp(1000)
+      // });
+
+      // dblclick
+
+      // $("#btn").dblclick(function(){
+      //   $('#hello').slideUp(1000)
+      // });
+
+      // mouseenter
+
+      // $("#btn").mouseenter(function(){
+      //   $('#hello').slideUp(1000)
+      // });
+
+      // mouseleave
+
+      // $("#btn").mouseleave(function(){
+      //   $('#hello').slideUp(1000)
+      // });
+
+      // on -> takes multiple events at the same time
+
+      //  $("#btn").on({
+      //   click:function(){
+      //     $(this).css("background-color", "red")
+      //   },
+      //   mouseenter: function(){
+      //     $(this).css("border", "10px solid black")
+      //   }
+      // });
+    </script>
+
+    <script>
+      // Jquery Effects
+
+      // 1. Show/hide/toggle
+
+      // $('#btn1').click(function () {
+      //   $('#hello').slideUp(3000)
+      // });
+
+      // $('#btn2').click(function () {
+      //   $('#hello').slideDown(2000)});
+
+      // $('#btn3').click(function () {
+      //   $('#hello').slideToggle();
+      // });
+
+
+
+
+
+      // Animate
+      // $('#btn1').click(function(){
+      //   $('#hello').animate({
+      //     height:'200px',
+      //     width:'300px',
+      //     fontSize: '200px'
+      //   })
+      // })xs
+
+
+
+
+
+      // use custom css and toggle inside animate
+
+      // $(document).ready(function () {
+      //   $('#btn1').click(function () {
+      //     $('#hello').animate({
+      //       height: 'toggle',
+      //     });
+      //   });
+      // });
+
+
+
+
+      // $(document).ready(function () {
+      //   $('#btn1').click(function () {
+      //     var div = $('#div');
+      //     div.animate({ height: '300px', opacity: '0.4' }, 'slow');
+      //     div.animate({ width: '300px', opacity: '0.8' }, 'slow');
+      //     div.animate({ height: '100px', opacity: '0.4' }, 'slow');
+      //     div.animate({ width: '100px', opacity: '0.8' }, 'slow');
+      //   });
+      // });
+
+
+
+
+
+      // show the innerhtml
+
+      // $(document).ready(function(){
+      //   $('#html').click(function(){
+      //     alert($('#hello').html());  // will return inner html /content with the inner tags as it is
+      //   })
+      // })
+
+      //       $(document).ready(function(){
+      //   $('#html').click(function(){
+      //     alert($('#hello').text());  // will return inner text with no styling
+      //   })
+      // })
+
+
+
+
+
+      // CHANGE THE INNER html
+
+      // $(document).ready(function(){
+      //   $('#html').click(function(){
+      //     $('#hello').html("Akshay");  // Can update the inner html. Will chnage the value to "Akshay" whatever in the bracket
+      //   })
+      // })
+
+
+
+
+
+      // Get, Set in jQuery
+
+      // we use .html(), .text(), .val()
+
+
+      // to receive data from FORM
+
+      // $('#form-button').click(function(){
+      //   let x = $('#input').val()
+      //   if( x == ''){
+      //     alert('it cant be empty')
+      //   } else {
+      //   alert('your name is' + $('#input').val() )
+      // }
+      // })
+
+
+
+
+
+
+
+      // append in jQuery
+
+      // .append()
+
+      // $('#append').click(function(){
+      //   $('#hello').append("hello").   insert after the content
+      // })
+
+      // $('#append').click(function(){
+      //   $('#hello').prepend("prepend");    insert before the content, at the starting
+      // })
+
+
+
+
+
+
+      /* append elements */
+
+      //  $('#append').click(function(){
+
+      //   let news = document.createElement("li");
+      //   news.textContent = "new element";
+      //   $('#hello').append(news);    /* insert before the content, at the starting */
+      // })
+
+
+
+
+
+
+      // create element with jQuery
+      // var txt2 = $("<p></p>").text("Text.");
+
+      //       $('#append').click(function(){
+      //         var text = $('<li></li>').text("with jquery")
+      //   $('#hello').prepend(text);    /* insert before the content, at the starting */
+      // })
+
+      //        $('#append').click(function(){
+      //          $('div').before('<h1>heading</h1>');    /* insert before the content, at the starting */
+      // })
+
+      // $('#append').click(function(){
+      //          $('div').after('<h1>heading</h1>');    /* insert before the content, at the starting */
+      // })
+
+
+
+
+
+
+      // remove
+
+      // $('#remove').click(function(){       /* remove whole element */
+      //   $(div).remove()
+      // })
+
+      // $('#remove').click(function(){          /* remove the child elements of the selelcted element */
+      //   $(div).empty()
+      // })
+
+
+
+
+
+
+
+      // ADD CLASSES
+      // $('#addclass').click(function(){
+      //   $('#div').addClass("background")
+      // })
+
+      // $('#remove-class').click(function(){
+      //   $('#div').removeClass("background")
+      // })
+
+      // $('#toggle-class').click(function(){
+      //   $('#div').toggleClass("background")
+      // })
+
+
+
+
+
+
+
+
+
+      // jQuery - Dimensions
+
+/*       $('button').click(function () {
+        $('#div1').width(500).height(500);
+      }); */
+
+
+
+
+
+
+
+      // Parent - to find the parent of particular element
+
+
+      // $("#parent").click(function(){
+      //   console.log(($('#hello').parent()));
+      // });
+
+
+      // $("#parent").click(function(){
+      // $('#hello').parent().css({
+      //   "color":"yellow",
+      //   "background-color":"green"
+      // });
+      // });
+
+
+           // $("#parent").click(function(){
+      // $('#hello').parent().css({
+      //   "color":"yellow",
+      //   "background-color":"green"
+      // });
+      // });
+
+
+// parents(). - return all the parents of the element
+
+      //      $("#parent").click(function(){
+      // $('#em').parents().css({
+      //   "color":"yellow",
+      //   "background-color":"green"
+      // });
+      // });
+
+
+      // The parentsUntil() -> method returns all ancestor elements between two given arguments.
+
+      // $("#parent").click(function(){
+      // $('#em').parentsUntil("#div").css({
+      //   "color":"purple"
+      // })
+      // });
+
+
+
+
+
+
+      // jQuery Traversing - Descendants
+
+      // Childeren()
+
+ /*      $(document).ready(function(){
+      console.log($("#div").children());
+      });
+ */
+
+
+
+
+
+
+      // Find(). - this will find the required element we need. Like we need button in the below example
+
+      // $(document).ready(function(){
+      // console.log($("#div").find("button"));
+      // });
+
+
+
+
+
+
+
+
+
+
+      // jQuery AJAX
+
+      // Syntax - $(selector).load(URL,data,callback);
+
+      // console.log($.get("www.google.com"));
+
+
+      // $("#div1").load("demo_test.txt");     /* demo_text.txt is a file */
+
+      // $("#div1").load("demo_test.txt #h1");   /* if we want to get particular data from the file */
+
+
+/*       The optional callback parameter specifies a callback function to run when the load() method is completed. The callback function can have different parameters:
+
+responseTxt -   contains the resulting content if the call succeeds
+statusTxt -   contains the status of the call
+xhr -         contains the XMLHttpRequest object */
+
+/* $("#btn1").click(function(){
+  
+  $("#div").load("demo_text.txt", function(responseTxt, statusTxt, xhr){
+    if(statusTxt == "success")
+      alert("External content loaded successfully!");
+    if(statusTxt == "error")
+      alert("Error: " + xhr.status + ": " + xhr.statusText);
+  });
+});
+ */
+
+
+
+
+
+
+
+//  jQuery - AJAX get() and post() Methods
+
+// GET - Requests data from a specified resource
+// POST - Submits data to be processed to a specified resource
+
+// $('#btn1').click(function(){
+//   console.log($.get("https://www.google.com", callback));
+
+// })
+
+/* 
+The required URL parameter specifies the URL you wish to request.
+
+The optional callback parameter is the name of a function to be executed if the request succeeds.
+
+The following example uses the $.get() method to retrieve data from a file on the server: */
+
+/* 
+$("button").click(function(){
+  $.get("demo_test.asp", function(data, status){
+    alert("Data: " + data + "\nStatus: " + status);
+  });
+}); */
+
+
+
+
+
+
+      
+
+    </script>
+  </body>
+</html>
